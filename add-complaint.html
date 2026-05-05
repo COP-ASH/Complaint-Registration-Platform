@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint | VoiceOut</title>
+    <meta name="description" content="Submit a new complaint to the platform.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">VoiceOut</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="add-complaint.html">Register Complaint</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <h1 style="text-align: center;">Register a Complaint</h1>
+            <p class="subtitle" style="text-align: center;">Fill in the details below to submit your complaint.</p>
+            
+            <form id="complaint-form" class="card">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="e.g. New York" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="1234567890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Complaint Details</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe your issue..." required></textarea>
+                </div>
+
+                <div id="ai-section" class="ai-section hidden">
+                    <div class="form-group">
+                        <label>Review Question</label>
+                        <div id="ai-question-text" class="ai-question-box">
+                            Generating a relevant follow-up question...
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ai-answer">Your Answer</label>
+                        <textarea id="ai-answer" name="ai-answer" rows="3" placeholder="Provide more details here..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn btn-large">Generate AI Question</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="index.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">&larr; Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 VoiceOut Platform. Built with &hearts; for the community.
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
